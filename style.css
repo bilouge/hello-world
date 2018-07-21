@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	border: 0;
+    box-sizing: border-box;
 }
 
 p {
@@ -16,7 +17,7 @@ p {
 
 #side {
 	display: inline-block;
-	width: 35%;
+	width: 33.33%;
 	height: 100%;
 	border-right: solid black 2px;
     float:left; 
@@ -24,18 +25,17 @@ p {
 
 #upgrades {
     display: inline-block;
-    float: right;
-    width: calc(65% - 12px);
+    float: left;
+    width: calc(100% - 33.33% -33.33%);
     height: 100%;
     padding-left: 10px;
 }
 
-#glovesUpgradesCount {
-	display: inline-block;
-	font-size: 50px;
-	font-style: normal;
-    font-family: sans-serif;
-    transform: translateY(24px)
+#itemsDescription {
+    display: block;
+    height: 100%;
+    width: 33.34%;
+    float: left;
 }
 
 #glovesDescription {
@@ -46,17 +46,6 @@ p {
     margin: 0 0 0 100px;
     max-width: 40%;
     transform: translateY(20px);
-}
-
-#glovesUpgradesCount {
-    display: inline.block;
-    font-size: 25px;
-}
-
-.lvlTXT {
-    display: inline-block;
-    overflow: visible;
-    padding-top: 50px;
 }
 
 #grapeButton {
@@ -83,13 +72,12 @@ p {
 }
 
 
-
-
 .upgradesButtons {
     font-size: 24px;
-    display: inline-block;
+    display: block;
     padding: 10px;
     border: solid black 2px;
+    float: left;
 }
 
 .inlineP {
@@ -97,7 +85,7 @@ p {
     padding-top: 32px;
     padding-right: 20px;;
     margin: 0;
-    display: inline;
+    display: inline-block;
     float: left;
     font-size: 30px;
     transform: translateY(-10px);

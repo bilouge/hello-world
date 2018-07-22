@@ -5,24 +5,29 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<p id="grapes-1"></p>
+    
 	<div id="side">
-		<button id="grapeButton" type="button" onclick="updateClickCount()">Collect Grapes</button>
-		<br><br>
-		<p id="grapeNumber"></p>
-		<div>
-		<p style="float: left">Number of grapes/click:</p>
-		<p id="numberOfGrapesPerClick"></p></div>
+        <button id="grapeButton" type="button" onclick="updateClickCount()">Collect Grapes</button>
+        <br><br>
+        <p id="grapeNumber"></p>
+        <div>
+        <p style="float: left">Number of grapes/click: </p>
+        <p id="numberOfGrapesPerClick"></p></div>
 	</div>
+    
 	<div id="upgrades">
-		<div class="itemsButtons">
-			<button class="upgradesButtons" type="button" onclick="updateGlovesCount()">Increase Gloves Quality<p id="glovesCost"></p></button>
-			<div><p class="inlineP">LVL</p></div><p id="glovesUpgradesCount"></p>
-		</div>
-		<p class="itemsDescription">You pick twice as much grapes (per upgrade)</p>
-	
-	
+
+        <button class="upgradesButtons" type="button" onclick="updateGlovesCount()">Increased Gloves Quality<p id="glovesCost"></p></button>
+        <div  class="inlineP">
+            <p id="glovesUpgradesCount"></p>
+        </div>
+        <button class="upgradesButtons" type="button" onclick="">Farmer</button>
+  
 	</div>
+    
+    <div id="itemsDescription">
+        <p id="glovesDescription">You pick twice as much grapes (per upgrade)</p>
+    </div>
 	
 	
 	

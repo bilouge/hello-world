@@ -15,7 +15,7 @@ function updateClickCount() {
 var glovesUpgrades = 0;
 document.getElementById("glovesUpgradesCount").innerHTML = `LVL ${glovesUpgrades}`;
 // Multiplicator of gloves upgrades
-var glovesMulti = 1;
+var glovesMulti = 10;
 // Add 1 per click to the gloves upgrades
 
 document.getElementById("glovesCost").innerHTML = `(${glovesMulti})`;

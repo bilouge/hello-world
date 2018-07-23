@@ -11,22 +11,25 @@
         <br><br>
         <p id="grapeNumber"></p>
         <div>
-        <p style="float: left">Number of grapes/click: </p>
-        <p id="numberOfGrapesPerClick"></p></div>
+        	<p id="numberOfGrapesPerClick"></p>
+		</div>
 	</div>
     
 	<div id="upgrades">
-
-        <button class="upgradesButtons" type="button" onclick="updateGlovesCount()">Increased Gloves Quality<p id="glovesCost"></p></button>
+		<div id="glovesContainer">
+        	<button id="glovesButton" class="upgradesButtons" type="button" onclick="updateGlovesCount()">Increased Gloves Quality
+			<p id="glovesCost"></p></button>
+			<p id="glovesDescription">You pick twice as much grapes (per upgrade)</p>
+		</div>
         <div  class="inlineP">
             <p id="glovesUpgradesCount"></p>
         </div>
-        <button class="upgradesButtons" type="button" onclick="">Farmer</button>
+        <button id="farmerButton" class="upgradesButtons" type="button" onclick="updateFarmerCount()">Farmer<p id="farmerCost"></p></button>
   
 	</div>
     
     <div id="itemsDescription">
-        <p id="glovesDescription">You pick twice as much grapes (per upgrade)</p>
+        
     </div>
 	
 	

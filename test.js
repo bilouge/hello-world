@@ -1,13 +1,14 @@
 /* The games "time interval", after each second, values are added to numberOfGrapes */
-document.onload = setInterval(timerFunction(), 1000);
+window.setInterval(timerFunction(), 1000);
 // The function executed by the timer
 	
 
-/* I need to create a local variable that adds the productivity until the productivity becomes an integer, as soon as it becomes an integer; add the value to the number of grapes 
-		*/
+/* I need to create a local variable that adds the productivity until the productivity becomes an integer, as soon as it becomes an integer; add the value to the number of grapes */
 var prodAccumulation = farmerProductivity;
-function timerFunction() {
-	if (prodAccumulation % 1 != 0) {
+
+window.onload = timerFunction() (
+    setInterval(function() {
+        	if (prodAccumulation % 1 != 0) {
 		prodAccumulation += farmerProductivity;
 	}
 	else {
@@ -15,7 +16,9 @@ function timerFunction() {
 		prodAccumulation = farmerProductivity;
 	}
 	document.getElementById("grapeNumber").innerHTML = numberOfGrapes;
-}
+    }, 1000)
+)
+
 
 
 
@@ -26,7 +29,8 @@ var grapesMulti = 0;
 var grapesPerSecond = 0;
 // Number of Grapes per click
 var grapesClick = 1;
-document.getElementById("numberOfGrapesPerClick").innerHTML = `${grapesClick} Grapes per Click`;
+if (grapesClick === 1) document.getElementById("numberOfGrapesPerClick").innerHTML = `${grapesClick} Grape per Click`;
+else document.getElementById("numberOfGrapesPerClick").innerHTML =  `${grapesClick} Grapes per Click`;
 // Add 1 per click to the number of grapes
 document.getElementById("grapeNumber").innerHTML = numberOfGrapes;
 function updateClickCount() {
@@ -60,7 +64,7 @@ var farmerMulti = 10;
 var farmerProductivity = 0;
 var farmerNumber = 0;
 /* This variable is not used yet; it will be used once I incorporate upgrade for the farmer */
-var upgradesToFarmer = 0;
+var upgradesToFarmer = 1;
 var individualFarmerProductivity = 0.1 * upgradesToFarmer;
 
 
@@ -71,7 +75,7 @@ function updateFarmerCount() {
 		numberOfGrapes -= farmerMulti;
 		farmerNumber++;
 		document.getElementById("grapeNumber").innerHTML = numberOfGrapes;
-		farmerProductivity += (individualFarmerProductivity * farmerNumber);
+		farmerProductivity = (individualFarmerProductivity * farmerNumber);
 		farmerMulti *= 1.2;
 		if (farmerMulti % 1 != 0) {
 			// x is used as increment to find the decimal point
@@ -84,5 +88,9 @@ function updateFarmerCount() {
 			farmerMulti = Number(farmerMulti);
 		}
 		document.getElementById("farmerCost").innerHTML = `Cost: ${farmerMulti}`;
+        //DONOTKEEP (display farmer productivity)
+        document.getElementById("test").innerHTML = farmerProductivity;
 	}
 }
+//DONOTKEEP (display farmer productivity)
+document.getElementById("test").innerHTML = farmerProductivity;

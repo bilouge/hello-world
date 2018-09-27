@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/*Side Style*/
+div#side {
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button#main-btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 200px;
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    position: relative;
+    top: 150px;
+    border-radius: 50px 50px 25px 25px;
+    box-shadow: 0 10px #6c8d3a;
+    border: none;
+    outline: none;
+}
+
+button#main-btn:hover {
+    background-color: rgb(97, 32, 158);
+}
+
+button#main-btn:active {
+    top: 155px;
+    box-shadow: 0 5px #6c8d3a;
+}
+
+div#side p {
+    color: black;
+    position: relative;
+    top: 20px;
+}
+
+/*Nav Style*/
+div#nav {
+    background-color: #f1f1f1;
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.tabs {
+    width: 20%;
+    display: inline-block;  
+    padding: 20px 10px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+button.tabs > p {
+    font-weight: bold;
+}
+
+
+button#upgrades-tab {
+    background-color: #ffffff;
+}
+
+button.tabs:hover {
+    background-color: #d1d1d1 !important;
+}
+
+button#upgrades-tab {
+    background-color: #c0c0c0;
+}
+/*Main Container*/
+
+div#main {
+    
+}
+
+/*Upgrades Style*/
+
+div.two-col {
+    width: 100%;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    border: solid 1.5px green; 
+    padding: 5px 10px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+span.description {
+    border: dashed rgb(184, 153, 69) 3px;
+    display: inline-block;
+    margin-left: 10px;
+    background-color: rgb(184, 174, 174);
+    padding: 5px 10px;
+    position: absolute;
+    right: -188px;
+    top: -3px;
+    background-clip: padding-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in;
+    font-weight: 100;
+}
+
+div.upgrade-name:hover span.description {
+    opacity: 1;
+    visibility: visible;
+}
+
+span.description:hover {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.btn:hover {
+    background-color: #cecece;
+}
+
+div#upgrades {
+    margin-left: 100px;
+    float: left;
+    width: 65%;
+    margin: 20px 0 0 30px;
+    background-color: #f1f1f1;
+    box-shadow: 10px 10px 5px #e4e4e4;
+    display: block;
+    height: 300px;
+}
+
+span#farmer-desc {
+    /*QUESTION Is there a way to use absolute positioning more acurately?*/
+    right: -265px;
+    top: -4px;
+    text-align: center;
+}
+
+p#farmer-cost {
+    text-align: center;
+}
+
+p#farmer-count {
+    text-align: center;
+}
+
+/*Items Style*/
+
+div#items {
+    float: left;
+    width: 65%;
+    display: none;
+    margin: 20px 0 0 30px;
+    background-color: #f1f1f1;
+    box-shadow: 10px 10px 5px #e4e4e4;
+    height: 300px;
+}
+
+button.items-btn {
+    display: block;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    position: relative;
+    border: solid 1.5px blue; 
+}
+
+button.items-btn:hover span.description {
+    opacity: 1;
+    visibility: visible;
+}
+
+p#gloves-desc {
+    right: -140px;
+}

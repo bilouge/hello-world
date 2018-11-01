@@ -34,6 +34,7 @@ button#main-btn {
     box-shadow: 0 10px #6c8d3a;
     border: none;
     outline: none;
+    clear: both;
 }
 
 button#main-btn:hover {
@@ -49,6 +50,10 @@ div#side p {
     color: black;
     position: relative;
     top: 20px;
+}
+
+#productivity {
+    position: fixed;
 }
 
 /*Nav Style*/
@@ -85,13 +90,24 @@ button.tabs:hover {
 button#upgrades-tab {
     background-color: #c0c0c0;
 }
+
+
+
 /*Main Container*/
 
-div#main {
-    
-}
+
+
 
 /*Upgrades Style*/
+
+div#left-col {
+    float: left;
+}
+
+div#cent-col {
+    float: left;
+    margin-left: 20%;
+}
 
 div.two-col {
     width: 100%;
@@ -106,8 +122,9 @@ div.two-col {
     margin-left: 10px;
     position: relative;
     cursor: pointer;
-    font-weight: bold;
     background-color: inherit;
+    text-align: center;
+    outline: none;
 }
 
 span.description {
@@ -126,7 +143,7 @@ span.description {
     font-weight: 100;
 }
 
-div.upgrade-name:hover span.description {
+button.upgrade-name:hover span.description {
     opacity: 1;
     visibility: visible;
 }
@@ -151,21 +168,29 @@ div#upgrades {
     height: 300px;
 }
 
-span#farmer-desc {
+span#son-desc {
     /*QUESTION Is there a way to use absolute positioning more acurately?*/
-    right: -265px;
-    top: -4px;
+    left: 95%;
+    top: -15px;
     text-align: center;
 }
 
-p#farmer-cost {
-    text-align: center;
+span#daughter-desc {
+    left: 95%;
+    top: 5px;
+    font-weight: bold;
+    width: 300px;
+    color: black;
 }
 
-p#farmer-count {
-    text-align: center;
+span#farmer-desc {
+    left: 95%;
+    width: 300px;
 }
 
+span#tron-desc {
+    left: 95%;
+}
 /*Items Style*/
 
 div#items {
@@ -193,6 +218,71 @@ button.items-btn:hover span.description {
     visibility: visible;
 }
 
-p#gloves-desc {
-    right: -140px;
+span.items-desc {
+    border-color: rgb(247, 78, 78);
+}
+
+span#whip-desc {
+    left: 100%;
+    color: black;
+}
+
+/*Multiplier Style + Multi-bar*/
+
+div#multi {
+    margin-left: 100px;
+    float: left;
+    width: 65%;
+    margin: 20px 0 0 30px;
+    background-color: #f1f1f1;
+    box-shadow: 10px 10px 5px #e4e4e4;
+    display: none;
+    height: 300px;
+}
+
+div#multi > p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button#multi-btn {
+    display: block;
+    position: relative;
+    left: 40%;
+    top: 60px;
+    font-size: 30px;
+    border-color: rgb(255, 196, 0);
+}
+
+div#multi-bar-out {
+    width: 65%;
+    border: solid 2px black;
+    position: absolute;
+    bottom: 10%;
+    left: 32%;
+    border-radius: 20px;
+    display: none;
+    transition: display 0.3s ease-in;
+}
+
+div#multi-bar-in {
+    height: 10px;
+    background-color: grey;
+    border-radius: inherit;
+    width: 0%;
+}
+
+span#x2 {
+    position: absolute;
+    top: -35px;
+    left: 80%;
+    color: red;
+}
+
+div#triangle {
+    width: 0;
+    height: 0;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-top: red solid 10px;
 }

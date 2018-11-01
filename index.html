@@ -1,59 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Positioning Test</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
 </head>
 <body>
     <div id="side">
         <button onclick="btnClick()" id="main-btn">Collect Grapes
             <p id="grape-count"></p>
         </button>
+        <p id="productivity"></p>
     </div>
     <div id="nav">
-        <button onclick="tabSwitch(1, 'upgrades', 0)" id="upgrades-tab" class="tabs"><p>Upgrades</p></button>
-        <button onclick="tabSwitch(0, 'items', 1)" id="items-tab" class="tabs"><p>Items</p></button>
+        <button onclick="tabSwitch(1, 2, 'upgrades', 0)" id="upgrades-tab" class="tabs"><p>Upgrades</p></button>
+        <button onclick="tabSwitch(0, 2, 'items', 1)" id="items-tab" class="tabs"></button>
+        <button onclick="tabSwitch(0, 1, 'multi', 2)" id="multi-tab" class="tabs"><p>Multiplier</p></button>
         <!--insert tabSwitch once created-->
-        <button onclick="tabSwitch(1, 0, 3, 4)" class="tabs"><p>Panel 3</p></button>
+        <button onclick="tabSwitch(1, 2, 0, 4)" class="tabs"><p></p></button>
         <!--insert tabSwitch once created-->
-        <button onclick="tabSwitch(1, 2, 0, 4)" class="tabs"><p>Panel 4</p></button>
-        <!--insert tabSwitch once created-->
-        <button onclick="tabSwitch(1, 2, 3, 0)" class="tabs"><p>Panel 5</p></button>
+        <button onclick="tabSwitch(1, 2, 3, 0)" class="tabs"><p></p></button>
     </div>
     <!--The central window containing all tabs-->
     <div id="main">
         <!--The Upgrades Tab-->
         <div id="upgrades" class="tabcont">
-            <!--The two-column layout of upgrades-->
-            <div class="two-col">
-                <div onclick="farmerClick()" class="upgrade-name btn"><b>Ungrateful son</b>
-                    <p id="farmer-cost"></p>
-                    <span id="farmer-desc" class="description"></span>
+            <!--Left Column-->
+            <div id="left-col">
+                <div class="two-col">
+                    <button onclick="sonClick()" class="upgrade-name btn">Ungrateful Son
+                        <p id="son-cost"></p>
+                        <span id="son-desc" class="description"></span>
+                    </button>
+                </div>
+                <div class="two-col">
+                    <button onclick="daughterClick()" id="daughter-btn" class="upgrade-name btn"></button>   
+                </div>
+                <div class="two-col">
+                    <button onclick="farmerClick()" id="farmer-btn" class="upgrade-name btn"></button>
                 </div>
             </div>
-            <div class="two-col">
-                <div class="upgrade-name btn"><b>Appreciative Daughter</b>
-                    <span class="description">Upgrade 2 Description</span>
-                </div>
-                
-            </div>
-            <div class="two-col">
-                <div class="upgrade-name btn"><b>Upgrade 3</b>
-                    <span class="description">Upgrade 3 Description</span>
+            <!--Central Column-->
+            <div id="cent-col">
+                <div class="two-col">
+                    <button onclick="tronClick()" id="tron-btn" class="upgrade-name btn">GrapeTron3000</button>
                 </div>
             </div>
         </div>
         <!--End of the Upgrades Tab-->
         <div id="items" class="tabcont">
-            <button class="items-btn btn">Gloves
-                <p id="glove-count"></p>
-                <p id="gloves-desc" class="description">Item 1 Description</p>
+            <button onclick="whipClick()" id="whip-btn" class="items-btn btn">Whip
+                <p id="whip-cost"></p>
+                <span id="whip-desc" class="description items-desc">test</span>
             </button>
-            <button class="items-btn btn">Item 2</button>
-            <button class="items-btn btn">Item 3</button>
         </div>
-        <p id="test"></p>
+        <div id="multi" class="tabcont">
+            <p>Get a multiplicative bonus applied the more you click on the
+                "Collect Grapes" button.<br>
+                The bonus decreases over time when you are not clicking.
+            </p>
+            <button onclick="multiClick()" id="multi-btn" class="btn">
+                <span id="multi1">Bicycle (X2)<p id="multi1-cost"></p></span>
+            </button>
+        </div>
+        <div id="multi-bar-out"><span id="x2">2X<div id="triangle"></div></span><div id="multi-bar-in"></div></div>
     </div>
     <script src="script.js"></script>
 </body>
